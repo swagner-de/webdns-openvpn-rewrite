@@ -1,6 +1,9 @@
 # webdns-openvpn-rewrite
 In case your proxy server or DNS does not resolve DynamicDNS names, this script will query an webservice via http and replace the domain in your OpenVPN config with the returned IP.
 
+## Proxy Settings
+In case you can only connect to the internet through a proxy server, the script will use the proxy settings in the OpenVPN config file provided with the line `http-proxy proxy.mydomain.com 8080`. If this line is not present, python will use the http_proxy environment variables if set.
+
 ## Setup and usage
 
 The script is tested with python 3.5.2, it does only require standard python libraries.
